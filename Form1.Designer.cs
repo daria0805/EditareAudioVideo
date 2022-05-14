@@ -28,229 +28,244 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.LoadImage = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.GreyImage = new System.Windows.Forms.Button();
+            this.Histogram = new System.Windows.Forms.Button();
+            this.alpha_textBox = new System.Windows.Forms.TextBox();
+            this.beta_textBox = new System.Windows.Forms.TextBox();
+            this.Brightness = new System.Windows.Forms.Button();
+            this.Gamma = new System.Windows.Forms.Button();
+            this.gamma_textBox = new System.Windows.Forms.TextBox();
+            this.Resize = new System.Windows.Forms.Button();
+            this.Rotate = new System.Windows.Forms.Button();
+            this.BlendingImage = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button10 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.VideoCapture = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // LoadImage
             // 
-            this.button1.Location = new System.Drawing.Point(12, 15);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 59);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "LoadImage\r\n";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.LoadImage.Location = new System.Drawing.Point(76, 61);
+            this.LoadImage.Margin = new System.Windows.Forms.Padding(4);
+            this.LoadImage.Name = "LoadImage";
+            this.LoadImage.Size = new System.Drawing.Size(147, 73);
+            this.LoadImage.TabIndex = 0;
+            this.LoadImage.Text = "LoadImage\r\n";
+            this.LoadImage.UseVisualStyleBackColor = true;
+            this.LoadImage.Click += new System.EventHandler(this.LoadImage_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 90);
+            this.pictureBox1.Location = new System.Drawing.Point(474, 61);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(110, 113);
+            this.pictureBox1.Size = new System.Drawing.Size(798, 568);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // button2
+            // GreyImage
             // 
-            this.button2.Location = new System.Drawing.Point(174, 18);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(110, 52);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "GreyImage\r\n";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.GreyImage.Location = new System.Drawing.Point(76, 143);
+            this.GreyImage.Margin = new System.Windows.Forms.Padding(4);
+            this.GreyImage.Name = "GreyImage";
+            this.GreyImage.Size = new System.Drawing.Size(147, 64);
+            this.GreyImage.TabIndex = 2;
+            this.GreyImage.Text = "GreyImage\r\n";
+            this.GreyImage.UseVisualStyleBackColor = true;
+            this.GreyImage.Click += new System.EventHandler(this.GreyImage_Click);
             // 
-            // pictureBox2
+            // Histogram
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(174, 90);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(110, 113);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
+            this.Histogram.Location = new System.Drawing.Point(76, 215);
+            this.Histogram.Margin = new System.Windows.Forms.Padding(4);
+            this.Histogram.Name = "Histogram";
+            this.Histogram.Size = new System.Drawing.Size(147, 64);
+            this.Histogram.TabIndex = 5;
+            this.Histogram.Text = "Histogram";
+            this.Histogram.UseVisualStyleBackColor = true;
+            this.Histogram.Click += new System.EventHandler(this.Histogram_Click);
             // 
-            // pictureBox3
+            // alpha_textBox
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(497, 90);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(107, 113);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
+            this.alpha_textBox.Location = new System.Drawing.Point(74, 290);
+            this.alpha_textBox.Margin = new System.Windows.Forms.Padding(4);
+            this.alpha_textBox.Name = "alpha_textBox";
+            this.alpha_textBox.Size = new System.Drawing.Size(145, 22);
+            this.alpha_textBox.TabIndex = 6;
             // 
-            // button3
+            // beta_textBox
             // 
-            this.button3.Location = new System.Drawing.Point(339, 18);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(114, 52);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Histogram";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.beta_textBox.Location = new System.Drawing.Point(72, 320);
+            this.beta_textBox.Margin = new System.Windows.Forms.Padding(4);
+            this.beta_textBox.Name = "beta_textBox";
+            this.beta_textBox.Size = new System.Drawing.Size(145, 22);
+            this.beta_textBox.TabIndex = 7;
             // 
-            // textBox1
+            // Brightness
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 209);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(110, 20);
-            this.textBox1.TabIndex = 6;
+            this.Brightness.Location = new System.Drawing.Point(74, 347);
+            this.Brightness.Margin = new System.Windows.Forms.Padding(4);
+            this.Brightness.Name = "Brightness";
+            this.Brightness.Size = new System.Drawing.Size(147, 60);
+            this.Brightness.TabIndex = 8;
+            this.Brightness.Text = "Brightness";
+            this.Brightness.UseVisualStyleBackColor = true;
+            this.Brightness.Click += new System.EventHandler(this.Brightness_Click);
             // 
-            // textBox2
+            // Gamma
             // 
-            this.textBox2.Location = new System.Drawing.Point(174, 209);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(110, 20);
-            this.textBox2.TabIndex = 7;
+            this.Gamma.Location = new System.Drawing.Point(72, 445);
+            this.Gamma.Margin = new System.Windows.Forms.Padding(4);
+            this.Gamma.Name = "Gamma";
+            this.Gamma.Size = new System.Drawing.Size(147, 60);
+            this.Gamma.TabIndex = 9;
+            this.Gamma.Text = "Gamma";
+            this.Gamma.UseVisualStyleBackColor = true;
+            this.Gamma.Click += new System.EventHandler(this.Gamma_Click);
             // 
-            // button4
+            // gamma_textBox
             // 
-            this.button4.Location = new System.Drawing.Point(497, 18);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(107, 49);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "Brightness";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.gamma_textBox.Location = new System.Drawing.Point(74, 415);
+            this.gamma_textBox.Margin = new System.Windows.Forms.Padding(4);
+            this.gamma_textBox.Name = "gamma_textBox";
+            this.gamma_textBox.Size = new System.Drawing.Size(145, 22);
+            this.gamma_textBox.TabIndex = 11;
             // 
-            // button5
+            // Resize
             // 
-            this.button5.Location = new System.Drawing.Point(648, 18);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(110, 49);
-            this.button5.TabIndex = 9;
-            this.button5.Text = "Gamma";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.Resize.Location = new System.Drawing.Point(76, 529);
+            this.Resize.Margin = new System.Windows.Forms.Padding(4);
+            this.Resize.Name = "Resize";
+            this.Resize.Size = new System.Drawing.Size(147, 58);
+            this.Resize.TabIndex = 12;
+            this.Resize.Text = "Resize\r\n";
+            this.Resize.UseVisualStyleBackColor = true;
+            this.Resize.Click += new System.EventHandler(this.Resize_Click);
             // 
-            // pictureBox4
+            // Rotate
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(648, 90);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(110, 113);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 10;
-            this.pictureBox4.TabStop = false;
+            this.Rotate.Location = new System.Drawing.Point(78, 604);
+            this.Rotate.Margin = new System.Windows.Forms.Padding(4);
+            this.Rotate.Name = "Rotate";
+            this.Rotate.Size = new System.Drawing.Size(145, 57);
+            this.Rotate.TabIndex = 14;
+            this.Rotate.Text = "Rotate\r\n";
+            this.Rotate.UseVisualStyleBackColor = true;
+            this.Rotate.Click += new System.EventHandler(this.Rotate_Click);
             // 
-            // textBox3
+            // BlendingImage
             // 
-            this.textBox3.Location = new System.Drawing.Point(648, 209);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(110, 20);
-            this.textBox3.TabIndex = 11;
+            this.BlendingImage.Location = new System.Drawing.Point(280, 61);
+            this.BlendingImage.Margin = new System.Windows.Forms.Padding(4);
+            this.BlendingImage.Name = "BlendingImage";
+            this.BlendingImage.Size = new System.Drawing.Size(135, 73);
+            this.BlendingImage.TabIndex = 16;
+            this.BlendingImage.Text = "BlendingImage\r\n";
+            this.BlendingImage.UseVisualStyleBackColor = true;
+            this.BlendingImage.Click += new System.EventHandler(this.BlendingImage_Click);
             // 
-            // button6
+            // button9
             // 
-            this.button6.Location = new System.Drawing.Point(795, 18);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(105, 47);
-            this.button6.TabIndex = 12;
-            this.button6.Text = "Resize\r\n";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button9.Location = new System.Drawing.Point(280, 143);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(135, 64);
+            this.button9.TabIndex = 17;
+            this.button9.Text = "ChangeColorSpace";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.ChangeColorSpace_Click);
             // 
-            // pictureBox5
+            // label1
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(800, 87);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(99, 115);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 13;
-            this.pictureBox5.TabStop = false;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 290);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 16);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "alpha=\r\n";
             // 
-            // button7
+            // label2
             // 
-            this.button7.Location = new System.Drawing.Point(932, 18);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(103, 46);
-            this.button7.TabIndex = 14;
-            this.button7.Text = "Rotate\r\n";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(19, 320);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 16);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "beta=";
             // 
-            // pictureBox6
+            // label3
             // 
-            this.pictureBox6.Location = new System.Drawing.Point(935, 85);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(99, 116);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 15;
-            this.pictureBox6.TabStop = false;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 415);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 16);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "gamma=";
             // 
-            // button8
+            // button10
             // 
-            this.button8.Location = new System.Drawing.Point(1077, 18);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(101, 45);
-            this.button8.TabIndex = 16;
-            this.button8.Text = "BlendingImage\r\n";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.button10.Location = new System.Drawing.Point(278, 290);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(137, 64);
+            this.button10.TabIndex = 21;
+            this.button10.Text = "WritingToVideo\r\n";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.WritingToVideo_Click);
             // 
-            // pictureBox7
+            // label4
             // 
-            this.pictureBox7.Location = new System.Drawing.Point(1077, 88);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(101, 113);
-            this.pictureBox7.TabIndex = 17;
-            this.pictureBox7.TabStop = false;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(796, 643);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(0, 16);
+            this.label4.TabIndex = 22;
+            // 
+            // VideoCapture
+            // 
+            this.VideoCapture.Location = new System.Drawing.Point(280, 215);
+            this.VideoCapture.Name = "VideoCapture";
+            this.VideoCapture.Size = new System.Drawing.Size(135, 64);
+            this.VideoCapture.TabIndex = 23;
+            this.VideoCapture.Text = "VideoCapture";
+            this.VideoCapture.UseVisualStyleBackColor = true;
+            this.VideoCapture.Click += new System.EventHandler(this.VideoCapture_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1228, 296);
-            this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(1637, 723);
+            this.Controls.Add(this.VideoCapture);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.BlendingImage);
+            this.Controls.Add(this.Rotate);
+            this.Controls.Add(this.Resize);
+            this.Controls.Add(this.gamma_textBox);
+            this.Controls.Add(this.Gamma);
+            this.Controls.Add(this.Brightness);
+            this.Controls.Add(this.beta_textBox);
+            this.Controls.Add(this.alpha_textBox);
+            this.Controls.Add(this.Histogram);
+            this.Controls.Add(this.GreyImage);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.LoadImage);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,24 +273,25 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button LoadImage;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Button GreyImage;
+        private System.Windows.Forms.Button Histogram;
+        private System.Windows.Forms.TextBox alpha_textBox;
+        private System.Windows.Forms.TextBox beta_textBox;
+        private System.Windows.Forms.Button Brightness;
+        private System.Windows.Forms.Button Gamma;
+        private System.Windows.Forms.TextBox gamma_textBox;
+        private System.Windows.Forms.Button Resize;
+        private System.Windows.Forms.Button Rotate;
+        private System.Windows.Forms.Button BlendingImage;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button VideoCapture;
     }
 }
 
