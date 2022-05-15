@@ -126,21 +126,6 @@ namespace WindowsFormsApp1
 
         }
 
-        private void ChangeColorSpace_Click(object sender, EventArgs e)
-        {
-            Image<Bgr, Byte> outputImage = new Image<Bgr, byte>(My_Image.Size);
-            My_Image.CopyTo(outputImage);
-            var data = outputImage.Data;
-            for (int i = 0; i < outputImage.Width; i++)
-            {
-                for (int j = 0; j < outputImage.Height; j++)
-                {
-                    data[j, i, 0] = 0;
-                    data[j, i, 1] = 0;
-                }
-            }
-
-        }
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
@@ -251,6 +236,11 @@ namespace WindowsFormsApp1
             IsReadingFrame = true;
             ReadAllFrames();
 
+        }
+
+        private void ChangeRedChannel_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = Class1.ChangeRedChannel(My_Image).AsBitmap();
         }
 
         private async void ReadAllFrames()
