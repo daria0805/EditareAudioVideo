@@ -70,6 +70,10 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
+            this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
             // 
             // GreyImage
             // 
@@ -100,7 +104,7 @@
             // 
             // beta_textBox
             // 
-            this.beta_textBox.Location = new System.Drawing.Point(54, 260);
+            this.beta_textBox.Location = new System.Drawing.Point(56, 257);
             this.beta_textBox.Name = "beta_textBox";
             this.beta_textBox.Size = new System.Drawing.Size(110, 20);
             this.beta_textBox.TabIndex = 7;
@@ -134,9 +138,9 @@
             // 
             // Resize
             // 
-            this.Resize.Location = new System.Drawing.Point(57, 430);
+            this.Resize.Location = new System.Drawing.Point(54, 430);
             this.Resize.Name = "Resize";
-            this.Resize.Size = new System.Drawing.Size(110, 47);
+            this.Resize.Size = new System.Drawing.Size(113, 47);
             this.Resize.TabIndex = 12;
             this.Resize.Text = "Resize\r\n";
             this.Resize.UseVisualStyleBackColor = true;
@@ -144,9 +148,9 @@
             // 
             // Rotate
             // 
-            this.Rotate.Location = new System.Drawing.Point(58, 491);
+            this.Rotate.Location = new System.Drawing.Point(54, 491);
             this.Rotate.Name = "Rotate";
-            this.Rotate.Size = new System.Drawing.Size(109, 46);
+            this.Rotate.Size = new System.Drawing.Size(113, 46);
             this.Rotate.TabIndex = 14;
             this.Rotate.Text = "Rotate\r\n";
             this.Rotate.UseVisualStyleBackColor = true;
@@ -154,9 +158,9 @@
             // 
             // BlendingImage
             // 
-            this.BlendingImage.Location = new System.Drawing.Point(210, 50);
+            this.BlendingImage.Location = new System.Drawing.Point(208, 50);
             this.BlendingImage.Name = "BlendingImage";
-            this.BlendingImage.Size = new System.Drawing.Size(101, 59);
+            this.BlendingImage.Size = new System.Drawing.Size(103, 59);
             this.BlendingImage.TabIndex = 16;
             this.BlendingImage.Text = "BlendingImage\r\n";
             this.BlendingImage.UseVisualStyleBackColor = true;
@@ -221,10 +225,10 @@
             // 
             // VideoCapture
             // 
-            this.VideoCapture.Location = new System.Drawing.Point(210, 175);
+            this.VideoCapture.Location = new System.Drawing.Point(208, 175);
             this.VideoCapture.Margin = new System.Windows.Forms.Padding(2);
             this.VideoCapture.Name = "VideoCapture";
-            this.VideoCapture.Size = new System.Drawing.Size(101, 52);
+            this.VideoCapture.Size = new System.Drawing.Size(103, 52);
             this.VideoCapture.TabIndex = 23;
             this.VideoCapture.Text = "VideoCapture";
             this.VideoCapture.UseVisualStyleBackColor = true;
@@ -232,9 +236,9 @@
             // 
             // ChangeRedChannel
             // 
-            this.ChangeRedChannel.Location = new System.Drawing.Point(208, 121);
+            this.ChangeRedChannel.Location = new System.Drawing.Point(208, 116);
             this.ChangeRedChannel.Name = "ChangeRedChannel";
-            this.ChangeRedChannel.Size = new System.Drawing.Size(102, 42);
+            this.ChangeRedChannel.Size = new System.Drawing.Size(102, 47);
             this.ChangeRedChannel.TabIndex = 24;
             this.ChangeRedChannel.Text = "ChangeRedChannel";
             this.ChangeRedChannel.UseVisualStyleBackColor = true;

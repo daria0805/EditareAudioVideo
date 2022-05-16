@@ -27,6 +27,12 @@ namespace WindowsFormsApp1
         private Image<Bgr, Byte> resized_image;
         private Image<Bgr, Byte>rotate_image;
         Rectangle rect; Point StartROI; bool MouseDown;
+        int TotalFrame, FrameNo;
+        double Fps;
+        bool IsReadingFrame;
+        VideoCapture capture;
+        private object beta_textbox;
+        private object numericUpDown1;
 
         public Form1()
         {
@@ -49,11 +55,8 @@ namespace WindowsFormsApp1
 
         private void GreyImage_Click(object sender, EventArgs e)
         {
-                
-                gray_image = My_Image.Convert<Gray, byte>();
-                pictureBox1.Image = gray_image.AsBitmap();
-                gray_image[0, 0] = new Gray(200);
-                
+
+            pictureBox1.Image = Class1.ConvertGreyImage(My_Image).AsBitmap();
         }
 
         private void Histogram_Click(object sender, EventArgs e)
@@ -71,57 +74,41 @@ namespace WindowsFormsApp1
 
         private void Brightness_Click(object sender, EventArgs e)
         {
-            float alpha = float.Parse(this.alpha_textBox.Text);
-            float beta = float.Parse(beta_textBox.Text);
-            imgOutput = new Image<Gray, Byte>(gray_image.Width, gray_image.Height);
-            for (int i = 0; i < gray_image.Height; i++)
-                for (int j = 0; j < gray_image.Width; j++)
-                {
-                    var formula = gray_image[i, j].Intensity * alpha + beta;
-                    imgOutput[i, j] = new Gray(formula);
-                }
-            pictureBox1.Image = imgOutput.AsBitmap();
+            string a = alpha_textBox.Text;
+            float alfa = float.Parse(a);
+            a = beta_textBox.Text;
+            int beta = int.Parse(a);
+            pictureBox1.Image = Class1.Brightness(My_Image, alfa, beta).AsBitmap();
         }
 
         private void Gamma_Click(object sender, EventArgs e)
         {
-            float gamma = float.Parse(gamma_textBox.Text);
-            gamma__Picture = My_Image;
-            gamma__Picture._GammaCorrect(gamma);
-            pictureBox1.Image = gamma__Picture.AsBitmap();
+            pictureBox1.Image = Class1.Gamma(My_Image, 20).AsBitmap();
 
         }
 
         private void Resize_Click(object sender, EventArgs e)
         {
-            
-            resized_image = new Image<Bgr, Byte>(My_Image.Width, My_Image.Height);
-            resized_image = My_Image.Resize(256, 128, Emgu.CV.CvEnum.Inter.Nearest);
-            pictureBox1.Image = resized_image.AsBitmap();
+
+            pictureBox1.Image = Class1.Resize(My_Image, 2).AsBitmap();
         }
 
         private void Rotate_Click(object sender, EventArgs e)
         {
-            rotate_image = new Image<Bgr, Byte>(My_Image.Width, My_Image.Height);
-            rotate_image = My_Image.Rotate(90, new Bgr(255, 255, 255));
-            pictureBox1.Image = rotate_image.AsBitmap();
+            pictureBox1.Image = (Class1.Rotate(My_Image, 90)).AsBitmap();
         }
 
         private async void BlendingImage_Click(object sender, EventArgs e)
         {
-            string[] FileNames = Directory.GetFiles(@"C:\Users\daria\Documents\GitHub\EditareAudioVideo", "*.png");
-            List<Image<Bgr, byte>> listImages = new List<Image<Bgr, byte>>();
-            foreach (var file in FileNames)
+            List<Image<Bgr, byte>> listImages = Class1.GetImage(@"C:\Users\daria\Documents\GitHub\EditareAudioVideo", "*.png");
+
+            List<Bitmap> listImagesReturn = Class1.BlendingImage(listImages);
+
+            for (int i = 0; i < listImagesReturn.Count; i++)
             {
-                listImages.Add(new Image<Bgr, byte>(file));
-            }
-            for (int i = 0; i < listImages.Count - 1; i++)
-            {
-                for (double alpha = 0.0; alpha <= 1.0; alpha += 0.01)
-                {
-                    pictureBox1.Image = listImages[i + 1].AddWeighted(listImages[i], alpha, 1 - alpha, 0).AsBitmap();
-                    await Task.Delay(25);
-                }
+                pictureBox1.Image = listImagesReturn[i];
+                await Task.Delay(25);
+
             }
 
         }
@@ -170,10 +157,7 @@ namespace WindowsFormsApp1
             StartROI = e.Location;
         }
 
-        int TotalFrame, FrameNo;
-        double Fps;
-        bool IsReadingFrame;
-        VideoCapture capture;
+
 
         private void WritingToVideo_Click(object sender, EventArgs e)
         {
@@ -260,5 +244,3 @@ namespace WindowsFormsApp1
 
     }
 }
-    
-
