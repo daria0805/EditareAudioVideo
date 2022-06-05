@@ -15,6 +15,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using NAudio.Wave;
 
 namespace WindowsFormsApp1
 {
@@ -33,6 +34,10 @@ namespace WindowsFormsApp1
         VideoCapture capture;
         private object beta_textbox;
         private object numericUpDown1;
+
+
+        private WaveOutEvent outputDevice;
+        private AudioFileReader audioFile;
 
         public Form1()
         {
@@ -100,7 +105,7 @@ namespace WindowsFormsApp1
 
         private async void BlendingImage_Click(object sender, EventArgs e)
         {
-            List<Image<Bgr, byte>> listImages = Class1.GetImage(@"C:\Users\daria\Documents\GitHub\EditareAudioVideo", "*.png");
+            List<Image<Bgr, byte>> listImages = Class1.GetImage(@"C:\Users\daria\Documents\GitHub\EditareAudioVideo\photo", "*.png");
 
             List<Bitmap> listImagesReturn = Class1.BlendingImage(listImages);
 
@@ -241,6 +246,57 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void Audio_Click(object sender, EventArgs e)
+        {
+
+            if (outputDevice == null)
+            {
+                outputDevice = new WaveOutEvent();
+                outputDevice.PlaybackStopped += OnPlaybackStopped;
+            }
+            if (audioFile == null)
+            {
+                audioFile = new AudioFileReader(@"C:\Users\daria\Documents\GitHub\EditareAudioVideo\Audio\Stuff (mp3cut.net).mp3");
+                outputDevice.Init(audioFile);
+            }
+            outputDevice.Play();
+
+
+        }
+
+
+        private void MixAudio_Click(object sender, EventArgs e)
+        {
+            var infile = @"C:\Users\daria\Documents\GitHub\EditareAudioVideo\Audio\Stuff(mp3cut.net).mp3";
+            var outfile = @"C:\Users\daria\Documents\GitHub\EditareAudioVideo\Audio\*.wav";
+
+
+            using (var reader = new Mp3FileReader(infile))
+            {
+                WaveFileWriter.CreateWaveFile(outfile, reader);
+            }
+
+            //using (var reader = new MediaFoundationReader(infile))
+            //{
+            //    WaveFileWriter.CreateWaveFile(outfile, reader);
+            //}
+
+        }
+
+        private void Playback_Click(object sender, EventArgs e)
+        {
+          
+
+        }
+
+
+        private void OnPlaybackStopped(object sender, StoppedEventArgs args)
+        {
+            outputDevice.Dispose();
+            outputDevice = null;
+            audioFile.Dispose();
+            audioFile = null;
+        }
 
     }
 }
